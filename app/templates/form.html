@@ -1,0 +1,14 @@
+<script>
+    var s = setInterval(setTime, 1000);
+    function setTime(){
+        document.getElementsByTagName('H3')[0].innerHTML = "The time is: " + moment(new Date()).format("h:mm:ss a")
+    }
+</script>
+
+{%if session["user"]%}
+    <h2 style="margin-left:20px">Welcome, {{ session["user"] }}</h2>
+    <br>
+    <h3 style="margin-left:20px">The time is: {{ momentjs(time).format("h:mm:ss a") }}</h3>
+{%else%}
+    <h2 style="margin-left:20px">Please sign in</h2>
+{%endif%}
