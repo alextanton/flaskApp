@@ -59,13 +59,13 @@ def login():
             user = request.form["username"]
             password = request.form["password"]
             user = models.User.query.filter_by(username=user).first()
-            if(user.password == password):
+            if(user!=None and user.password == password):
                 session["user"] = user.username
-            return redirect('/')
-        else:
-            form = Login()
-            response = make_response(render_template('login.html', error=True, form=form))
-            return response
+            	return redirect('/')
+            else:
+                form = Login()
+                response = make_response(render_template('login.html', error=True, form=form))
+                return response
     form = Signup()
     return render_template("login.html", form=form, error=False)
 
