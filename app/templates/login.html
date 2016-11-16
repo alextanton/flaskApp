@@ -3,7 +3,6 @@
 {%if error == True%}
 <h3 style="margin-left:20px">Error in Login</h3>
 <form style="margin-left:20px" action="" method="post" name="login">
-    {{ form.hidden_tag() }}
     Enter your username:<br>
     <div class="form-group has-error" style="width:300px">
         {{ form.username(class_="form-control") }}<br>
@@ -15,7 +14,6 @@
 {%else%}
 <h3 style="margin-left:20px">Login</h3>
 <form style="margin-left:20px" action="" method="post" name="login">
-    {{ form.hidden_tag() }}
     Enter your username:<br>
     <div class="form-group" style="width:300px">
         {{ form.username(class_="form-control") }}<br>

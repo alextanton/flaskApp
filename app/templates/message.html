@@ -3,7 +3,6 @@
 <p>
     <h2 style="margin-left:20px">Hello, {{session['user']}}</h2>
     <form style="margin-left:20px" action="" method="post" name="name">
-        {{ form.hidden_tag() }}
         Enter your message:<br>
         <div class="form-group" style="width:300px">
             {{ form.enter(size=40, class_="form-control") }}<br>

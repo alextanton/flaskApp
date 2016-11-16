@@ -1,3 +1,4 @@
+#!../venv/bin/python
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 from .momentjs import momentjs
